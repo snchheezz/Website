@@ -1,0 +1,53 @@
+/* =========================================
+   HACKER TERMINAL STYLE PARA MKDOCS
+   ========================================= */
+
+/* Colores de las pestañas activas (Púrpura) */
+.md-typeset .tabbed-set > input:checked + label {
+    color: #A333C8 !important;
+    border-color: #A333C8 !important;
+    font-weight: bold;
+}
+
+/* Cajas de código generales */
+.md-typeset .highlight pre {
+    background-color: #050505 !important; /* Negro absoluto */
+    border: 1px solid #333 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 0 15px rgba(173, 255, 47, 0.05);
+}
+
+/* Texto verde neón SOLO para bloques BASH */
+.md-typeset .language-bash code {
+    color: #ADFF2F !important;
+    text-shadow: 0 0 5px rgba(173, 255, 47, 0.2);
+}
+
+/* Truco de Magia: El Prompt automático que NO se copia */
+.md-typeset .language-bash code::before {
+    content: "root@snchheezz:~# ";
+    color: #58a6ff; /* Azul flojito */
+    margin-right: 8px;
+    user-select: none; /* Evita que el usuario lo seleccione al copiar */
+    opacity: 0.8;
+}
+
+/* Personalizar el botón de copiar nativo de MkDocs */
+.md-clipboard {
+    color: #888 !important;
+}
+.md-clipboard:hover {
+    color: #A333C8 !important; /* Púrpura al pasar el ratón */
+}
+/* Efecto para el logo de Berserk en la cabecera */
+.md-logo img {
+  transition: all 0.3s ease; /* Transición suave */
+  opacity: 1; /* Empieza un poco apagado para no destacar */
+}
+
+.md-logo img:hover {
+  opacity: 1; /* Al pasar el ratón se ilumina al 100% */
+  transform: scale(1.15); /* Se agranda solo un 10% */
+  filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.457)); /* Brillo rojo sutil */
+}
+
